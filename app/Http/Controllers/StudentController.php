@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Traits\Common;
+use App\Models\Student;
 
-class KidController extends Controller
+class StudentController extends Controller
 {
     use Common;
     /**
@@ -13,63 +14,15 @@ class KidController extends Controller
      */
     public function index()
     {
-        return view('kider');
+        //
     }
-    public function original()
-    {
-        return view ('original');
-    }
+
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view('page');
-    }
-    public function about()
-    {
-        return view('about');
-        
-    }
-
-    public function classes()
-    {
-        return view('classes');
-    }
-
-    public function contact()
-    {
-        return view('contact');
-    }
-
-    public function testimonial()
-    {
-        return view('testimonial');
-    }
-
-    public function facilities()
-    {
-        return view('facilities');
-    }
-
-    public function team()
-    {
-        return view('team');
-    }
-
-    public function action()
-    {
-        return view('action');
-    }
-
-    public function appointment()
-    {
-        return view('appointment');
-    }
-
-    public function error404()
-    {
-        return view('404page');
+        //
     }
 
     /**

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KidController;
+use App\Http\Controllers\TecherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,3 +47,14 @@ Route::get('action',[KidController::class, 'action'])->name('action');
 Route::get('appointment',[KidController::class, 'appointment'])->name('appointment');
 
 Route::fallback([KidController::class, 'error404']);
+
+Route::get('techerlist',[TecherController::class, 'index'])->middleware('verified');
+
+Route::get('addtecher',[TecherController ::class, 'create']);// يعرض ألنموذج
+
+Route::post('techers',[TecherController ::class, 'store'])->name('techers');
+
+Route::get('edittecher/{id}',[TecherController::class, 'edit']);
+
+//اسم url نفس الاسم الي كتبناه في الايديت في البلاد
+Route::put('updatetecher/{id}',[TecherController ::class, 'update'])->name('updatetecher');
